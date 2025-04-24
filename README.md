@@ -46,6 +46,7 @@ devops-db-pipeline-cicd-ssdt/
 │
 └── README.md
 ```
+---
  CI/CD Lifecycle
 Code Commit (SQL) → GitHub
 
@@ -70,7 +71,7 @@ Post-deployment validation
 Uses Invoke-SqlCmd to check success
 
 Logs output for audit
-
+---
 
 🎯 Why This Matters
 This setup automates database releases with auditability, traceability, and approval gates in mind. It's ideal for environments where:
@@ -80,7 +81,7 @@ This setup automates database releases with auditability, traceability, and appr
 ✅ Manual change approvals must be traceable
 
 ✅ Devs and DBAs need CI/CD parity with application teams
-
+---
 
 🧠 Key Features
 ✅ End-to-end CI/CD workflow for SQL deployments
@@ -92,7 +93,7 @@ This setup automates database releases with auditability, traceability, and appr
 ✅ Custom validation hooks post-deploy
 
 ✅ Modular folder structure to plug into real projects
-
+---
 📫 Let’s Connect
 I specialize in database DevOps, cloud data engineering, and end-to-end data platform delivery.
 This project is part of my portfolio to showcase automation leadership across both infrastructure and database layers.
