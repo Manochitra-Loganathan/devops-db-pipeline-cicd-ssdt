@@ -1,0 +1,23 @@
+trigger: none
+
+stages:
+- stage: Deploy
+  jobs:
+  - job: DeployDatabase
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+    - task: DownloadBuildArtifacts@0
+      inputs:
+        artifactName: 'db_artifacts'
+        downloadPath: '$(System.ArtifactsDirectory)'
+
+    - task: SqlAzureDacpacDeployment@1
+      inputs:
+        azureSubscription: '<Your Azure Connection>'
+        ServerName: '<your-db-server>.database.windows.net'
+        DatabaseName: '<your-db-name>'
+        SqlUsername: '$(sqlUsername)'
+        SqlPassword: '$(sqlPassword)'
+        DacpacFile: '$(System.ArtifactsDirectory)/db_artifacts/Database.dacpac'
+        DeployType: 'DacpacTask'
