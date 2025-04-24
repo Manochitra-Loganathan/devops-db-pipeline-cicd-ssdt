@@ -10,6 +10,11 @@ It includes:
 
 ---
 
+## 🧭 Architecture Diagram
+
+![CI/CD Pipeline for SSDT + ServiceNow](diagrams/devops_db_cicd_architecture.png)
+---
+
 ## 🔧 Tech Stack
 
 | Area             | Tools & Technologies                                    |
